@@ -66,6 +66,10 @@ class Locator {
     return red(px[getLoc(x, y, w)]) * 2;
   }
 
+  PVector getPos(PVector[] points, float x, float y, int w) {
+    return points[getLoc(x, y, w)];
+  }
+
   float rawDepthToMeters(int depthValue) {
     if (depthValue < 2047) {
       return (float)(1.0 / ((double)(depthValue) * -0.0030711016 + 3.3309495161));

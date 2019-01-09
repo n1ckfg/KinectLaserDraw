@@ -2,7 +2,9 @@ boolean mirror = false;
 boolean align = true;
 boolean multithreaded = true;
 PImage depthImg, rgbImg;
+PVector[] depthMap;
 boolean invertDepth = false;
+boolean realWorld = true;
 
 // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
@@ -77,6 +79,7 @@ void updateKinect() {
   depthImg = context.depthImage();
   rgbImg = context.rgbImage();
   //rgbImg = context.irImage();
+  if (realWorld) depthMap = context.depthMapRealWorld();
 }
 
 // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
