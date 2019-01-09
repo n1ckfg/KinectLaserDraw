@@ -27,14 +27,7 @@ void draw() {
   
   lights();
   
-  noStroke(); 
   loc.run();
-  
-  pushMatrix();
-  translate(loc.cursor.x, loc.cursor.y, loc.cursor.z);
-  fill(255);
-  sphere(10);
-  popMatrix();
   
   if (clicked && !isDrawing) {
     isDrawing = true;
