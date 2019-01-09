@@ -1,7 +1,7 @@
 import gab.opencv.*;
 
 OpenCV opencv;
-int thresh = 1;
+int thresh = 30;
 ArrayList<Contour> contours;
 PVector brightest = new PVector(0,0);
 
